@@ -1,0 +1,53 @@
+blockquote {
+	background-color: rgba(0, 0, 0, .12);
+	padding: 8px;
+}
+
+a {
+	color: darkred;
+	text-decoration: none;
+}
+
+/* 1. Applicare lo stile alla prima lettera del primo paragrafo */
+p:first-of-type::first-letter{
+    float: left;
+    color: darkred;
+    border: 3px ridge darkgoldenrod;
+    padding: 16px;
+    background-color: gold;
+    margin: 8px;
+}
+
+/* Aggiungere virgolette personalizzate prima e dopo il testo nel blockquote */
+blockquote::before {
+    content: open-quote; /* Aggiunge la virgolette prima del testo */
+    font-size: 2em; /* Rende la virgolette più grandi */
+    color: darkgoldenrod; /* Colore per le virgolette */
+    margin-right: 5px; /* Spazio tra la virgolette e il testo */
+}
+
+blockquote::after {
+    content: close-quote; /* Aggiunge la virgolette dopo il testo */
+    font-size: 2em; /* Rende la virgolette più grandi */
+    color: darkgoldenrod; /* Colore per le virgolette */
+    margin-left: 5px; /* Spazio tra la virgolette e il testo */
+}
+
+/* 2. Stile per il link (a)*/
+a {
+    color: darkred; /* Colore del link */
+    text-decoration: none; /* Rimuove la sottolineatura del link */
+    transition: color 0.5s; /* Aggiunge una transizione dolce al colore */
+}
+
+/* Colore del link quando si passa il mouse sopra*/
+a:hover {
+    color:darkblue; /* Cambia il colore al passaggio del }mouse */
+}
+
+/* Colore per i link visitati */
+a:visited {
+    color: purple; /* Colore per il link dopo che è stato visitato */
+}
+
+
